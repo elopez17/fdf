@@ -6,7 +6,7 @@
 /*   By: eLopez <elopez@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/21 00:06:40 by eLopez            #+#    #+#             */
-/*   Updated: 2017/11/22 14:17:10 by eLopez           ###   ########.fr       */
+/*   Updated: 2017/12/04 13:34:00 by elopez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,39 +81,39 @@ typedef struct	s_fdf
 /*
 **		These functions intialize variables in data structure t_fdf
 */
-void	init_fdf(t_fdf *f);
-void	re_init_fdf(t_fdf *f);
+void			init_fdf(t_fdf *f);
+void			re_init_fdf(t_fdf *f);
 
 /*
 **		This function deals with Parsing and Validating the given map
 */
-void	fdf_input(t_fdf *f, char *file);
+void			fdf_input(t_fdf *f, char *file);
 
 /*
 **		This function Sets up the graphics Window
 */
-void	fdf_window(t_fdf *f);
+void			fdf_window(t_fdf *f);
 
 /*
 **		This function Calculates: 3D coordinates in Matrix, and rotation
 */
-void	fdf_matrix(t_fdf *f);
+void			fdf_matrix(t_fdf *f);
 
 /*
 **		These functions draw lines in the image, pixel for pixel
 */
-void	fdf_image(t_fdf *f);
-void	putpixel(t_fdf *f, t_pix a, int clr);
+void			fdf_image(t_fdf *f);
+void			putpixel(t_fdf *f, t_pix a, int clr);
 
 /*
 **		This function displays instructions and default color value
 */
-void	fdf_display(t_fdf *f);
+void			fdf_display(t_fdf *f);
 
 /*
 **		These functions deal with Exits due to errors or 'ESC'
 */
-void	fdf_exit(t_fdf *f);
-void	fdf_error(int error);
+void			fdf_exit(t_fdf *f);
+void			fdf_error(int error);
 
 #endif

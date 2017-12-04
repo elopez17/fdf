@@ -6,7 +6,7 @@
 /*   By: eLopez <elopez@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 16:20:48 by eLopez            #+#    #+#             */
-/*   Updated: 2017/11/30 11:42:23 by eLopez           ###   ########.fr       */
+/*   Updated: 2017/12/04 13:39:05 by elopez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ void		fdf_matrix(t_fdf *f)
 		x = -1;
 		while (++x < f->map_x)
 		{
-			f->map[y][x].x1 = (x - (f->map_x/2)) * f->zoom;
-			f->map[y][x].y1 = (y - (f->map_y/2)) * f->zoom;
+			f->map[y][x].x1 = (x - (f->map_x / 2)) * f->zoom;
+			f->map[y][x].y1 = (y - (f->map_y / 2)) * f->zoom;
 			f->map[y][x].z = f->map[y][x].z1 * f->height;
 			rotate(f, &f->map[y][x]);
 			floats.a = f->map[y][x].x1;

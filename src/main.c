@@ -6,7 +6,7 @@
 /*   By: eLopez <elopez@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 15:16:41 by eLopez            #+#    #+#             */
-/*   Updated: 2017/11/22 13:47:33 by eLopez           ###   ########.fr       */
+/*   Updated: 2017/12/04 13:37:08 by elopez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	keypressed(int key, t_fdf *f)
 	key == KEYMIN ? --f->speed : 0;
 	key == KEYPLUS ? ++f->speed : 0;
 	key == KEYUP && f->zoom * MAX(f->map_x, f->map_y) <= \
-		 						MIN(f->win_x, f->win_y) ? f->zoom += 2 : 0;
+							MIN(f->win_x, f->win_y) ? f->zoom += 2 : 0;
 	key == KEYDOWN && f->zoom > 2 ? f->zoom -= 2 : 0;
 	key == KEYESC ? fdf_exit(f) : 0;
 	key == KEYR ? f->color ^= 0x00ff0000 : 0;

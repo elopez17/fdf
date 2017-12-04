@@ -6,7 +6,7 @@
 /*   By: eLopez <elopez@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 11:40:22 by eLopez            #+#    #+#             */
-/*   Updated: 2017/11/21 22:29:18 by eLopez           ###   ########.fr       */
+/*   Updated: 2017/12/04 13:43:16 by elopez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,15 +73,19 @@ static void	drawline(t_fdf *f, t_pix *a, t_pix *b)
 	if (a->x == b->x || a->y == b->y)
 		straight(f, *a, *b);
 	else if (abs(a->x - b->x) >= abs(a->y - b->y))
+	{
 		if (a->x < b->x)
 			diagonal_x(f, *a, *b);
 		else
 			diagonal_x(f, *b, *a);
+	}
 	else
+	{
 		if (a->y < b->y)
 			diagonal_y(f, *a, *b);
 		else
 			diagonal_y(f, *b, *a);
+	}
 }
 
 void		fdf_image(t_fdf *f)
